@@ -1,8 +1,8 @@
 - This Js write is based on this course : 🌐 [Website]((https://www.google.com/search?q=google+color+picker&oq=google+color+p&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyBggCEEUYOTIGCAMQABgeMgYIBBAAGB4yBggFEAAYHjIGCAYQABgeMgYIBxAAGB4yBggIEAAYHjIICAkQABgKGB7SAQgzODMxajBqN6gCALACAA&sourceid=chrome&ie=UTF-8)), 
 📚 [Reference]((https://github.com/jonasschmedtmann/complete-javascript-course))
 
-## 1. How to link Javascript
-JS = Dynamic effects and web applications in the browser
+## 1. How to Link Javascript
+"JS" = Adds Dynamic effects and web applications in the browser.
 
 1. Web applications (React)
 2. Web server (Node.js)
@@ -15,25 +15,29 @@ JS = Dynamic effects and web applications in the browser
 ```
 
 ## 2. Values and Variables
-- How to declaring Variables
+- How to declare Variables
 ```
-let firstName = 'James' // Variable = values
+let firstName = 'James' // 'firstName' is a variable, 'James' is its value
 console.log(firstName);
 ```
-When we assign variables we have to use camlecase.
+When we assign variables in Javascript, we usually use camlecase.
 
 write firstcase lowercase, Othercasese Uppercase.
-ex) firstNamePersone
+That means:
 
-- How to write Variables in Javascript.
+- Start with a lowercase letter.
+
+- Capitalize the first letter of each new word.
+→ Example: ```firstNamePerson```
+
 📚 [Reference]((https://github.com/jonasschmedtmann/complete-javascript-course))
 
-Variable is bascially box into we can store values.
+A variable is basically a box that stores a value.
 ## 3. Practice Assignment
-1. Declare variables called country, continent and population and assign their values according to your own country (population in millions).
+1. Declare variables called country, continent and population and assign values based on your own country (population in millions).
 
 2. Log their values to the console.
-```
+```javascript
 let country = "korea";
 let continent = "Asia";
 let population = 50000000;
@@ -43,35 +47,58 @@ console.log(continent);  // Asia
 console.log(population); // 50000000
 ```
 ## 4. Data Types 
-1. Number : Used for decimals and integers ```let age = 23;```
+1. Number : Used for decimals and integers  
 
-2. String : Used for text ```let firstName = 'Jonas';```
+   ```javascript
+   let age = 23;
+   ```
 
-    [string needs quotes('', "")]
+2. String : Used for text  
 
-3. Boolean : Logic type can be true or false : ```let fullAge = true;```
+   ```javascript
+   let firstName = 'Jonas';
+   ```
 
-4. Undefined : Value taken by a variable that is not yet defined ('empty value') : ```let children;```
+   A string must be enclosed in quotes ('' or "").
 
-5. Null : Also means empty value but it is just empty
+3. Boolean : Logic type can be true or false  
 
-6. Symbol : That is unique and cannot be changed [Not useful for now
+   ```javascript
+   let fullAge = true;
+   ```
 
-7. BigInt : Large than the number type can hold.
+4. Undefined : A variable that has been declared but not assigned a value yet ('empty value')  
+
+   ```javascript
+   let children;
+   ```
+
+5. Null : An explicitly assigned empty value
+
+6. Symbol : A unique and immutable value (not commonly used for now)
+
+7. BigInt : Used for very large integers beyond the range of Number
+
+
+(BigInt and Symbol are rarely used in beginner-level JavaScript.)
 
 (6,7 is not used that much)
 
-+) Javascript comment is written by ```//, (/**/)```
-
-- Special Operator 'type of'
++) Javascript comment is written by 
+```javascript
+// single-line comment  
+/* multi-line comment */
 ```
+
+- Special Operator 'typeof'
+```javascript
 console.log(typeof true)   // boolean
 console.log(typeof 23)     // number 
 console.log(typeof 'Git')  // string
 ```
 
-- How to change Values in Variable
-```
+- Changing the Value and Type of a Variable
+```js
 let JavascriptIsFun = true;
 console.log(typeof JavascriptIsFun); // boolean
 
@@ -80,7 +107,7 @@ console.log(typeof JavascriptIsFun); // string
 ```
 
 - Undefined
-```
+```js
 let year;
 console.log(year); // undefined
 console.log(typeof year); // undefined
@@ -90,39 +117,43 @@ console.log(year); // 1991
 console.log(typeof year); // number
 ```
 
-- Error exsits in typeof Operator
-```
+- ⚠️ A Well Known Bug in JavaScript
+```js
 console.log(typeof null);  // object
 ```
-[As for now just know that this is Legacy (bug)code.]
+> This is a known legacy bug in JavaScript. Just be aware of it for now.
 ## 5. let, const and var
-- When we mutate Variable let keyword is used, also declare empty Variables.
-```
+- When we mutate a Variable let keyword is used.
+It can also be used to declare empty Variables.
+``` javascript
 let age = 31;
 let age = 30;
-let name =;
+let name ;
 ```
 
-* const keyword make a variable that we can't assign.
-```
+* The const keyword creates a variable that cannot be reassigned.
+``` javascript
 const PI = 3.14;
 ```
-- use constant normally and use let when that variable needs change.
+- use constant normally, use let when the value needs change.
 
-> var(actually aviod these keyword!!), Just know as a 'Legacy' reason.
+> Avoid using `var`! It's kept only for legacy reasons.
 
-```
+```javascript
 var job = 'teacher';
 job = 'programmer';
 ```
-It seems like let and var are simillar but It's actually very different.(pass now and we can learn later.)
+It may seem like let and var are simillar, 
 
-Don't declare the variables not to use these 3 variables.
+but they're actually very different.(We'll learn more about this later.)
+
+Don't declare variables using var unless absolutely necessary.
+
 ## 6. Basic Operators
-Operators basically allow us to transform values or combine values.
+> Operators allow us to transform or combine values.
 
-1. Mathematical operators(+, -, *, /, %..)
-```
+1. Mathematical operators (+, -, *, /, %..)
+```js
 const NOW = 2025;
 const AGEJAMES = NOW - 1991;
 const AGEKEVIN = NOW - 1994;
@@ -131,17 +162,17 @@ console.log(AGEKEVIN * 2, AGEJAMES / 2);  // 62, 17
 console.log(2 ** 3); // 8
 ```
 
-- (+)operator can connect stirngs.
-```
+> The `+` operator can also be used to concatenate strings.
+```js
 const FIRSTNAME = 'KIM';
 const SECONDNAME = 'MINSOO'
 console.log(FIRSTNAME + " " + SECONDNAME);  // KIM MINSOO
 ```
 
-- Assignment operator(=)
-```
+- Assignment operator(`=`)
+```js
 let x = 10 + 5;  // 15
-x += 15  // x = x + 15 (This syntax can be used *=, -=, /=)
+x += 15  // x = x + 15 (This shorthand syntax also works with `*=`, `-=`, `/=`)
 console.log(x);  // 25
 x ++
 console.log(x);  // 26
@@ -150,17 +181,16 @@ console.log(x);  // 25
 ```
 
 - Comparison Operators (<, >, <=, >=)
-```
+```js
 console.log(AGEJAMES > AGEKEVIN);  // true
 console.log(AGEJAMES < AGEKEVIN);  // false
 ```
-## 7. Operators Precedence
-```
+## 7. Operator Precedence
+```js
 console.log(2 + 5 * 3);  // 17
 console.log((2 + 5)* 3); // 21
 ```
-Most important thing is that () is first Precedence.
-📚 [Reference]((http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence))
+The most important thing to remember is that parentheses `()` have the highest precedence.📚 [Reference]((http://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence))
 
 ## 8. #1 Coding Challenge.
 CHALLENGE #1
@@ -188,7 +218,7 @@ TEST DATA 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1
 
 IMPORTANT: The ** operator is not supported in this editor. Please make sure to use exactly this formula mass / (height * height), and not this one mass / (height ** 2).
 
-```
+```js
 let massMark = 78;
 let heightMark = 1.69;
 let massJohn = 92;
@@ -219,9 +249,9 @@ console.log("Mark's BMI higher than John's?", markHigherBMI);
 ```
 - In this course he use let instead const but i use let.(no problem) also i upgrade code!
 
-> acutally it can be solved by function but we didn't learn yet so..
-## 9. Strings & Templete Literals
-```
+> Acutally it can be solved by function but we didn't learn yet so..
+## 9. Strings & Template Literals
+```js
 let firstName = 'Jonas';
 let job = 'teacher';
 let age = 33;
@@ -229,40 +259,39 @@ let age = 33;
 let intro = "I'm " + firstName + ", a " + job + " " + age
 console.log(intro)  // I'm Jonas, a teacher 33
 ```
-- This is complex as you see, How make it more simple.
-> Now let we use templet Literal by (backtick and ${}).
-```
+- This looks complex. Let's make it simpler.
+> Now let's use a templet literal using (backtick and `${}`).
+```js
 let intro = `I'm ${firstName}, ${job} and my age is ${age}`;
 console.log(intro)  // I'm Jonas, teacher and my age is 33
 ```
-When we use string cover by ``(backtick) is very useful don't miss it.
-
-> Templete Literals are also useful in multi line
-```
+Backticks `` are very useful for string templates. Don’t forget to use them.
+> Templete literals are also useful for multi-line strings.
+```js
 console.log('string with\n\
 multiple\n\
 lines')
 ```
--> let's change it. (by use backtick)
-```
+-> Let's rewrite it using backticks. (by use backtick)
+```js
 console.log(`string with 
 multiple 
 lines.`)
 ```
 ## 10. if/else statements
 * ex1)
-```
+```js
 let age = 19;
 const OLDENOUGH >= age;
 
 if (OLDENOUGH) {  // (condition)
-    console.log(`OOO is okay to drive👌`);  // inside of {} this code block is executed if it's true.
-} else {  // else part is for condition is false.
+    console.log(`OOO is okay to drive👌`);  // the code `{}` runs if condition is true
+} else {  // else block runs when the condition is false.
     console.log(`ooo is not allowed to drive🤬.)
 }
 ```
 - ex2)
-```
+```js
 let birthYear = 1991;
 let century;
 
@@ -302,7 +331,7 @@ IMPORTANT: The ** operator is not supported in this editor.
 
 Please make sure to use exactly this formula mass / (height * height), and not this one mass / (height ** 2).
 
-```
+```js
 let massMark = 78;
 let heightMark = 1.69;
 let massJohn = 92;
