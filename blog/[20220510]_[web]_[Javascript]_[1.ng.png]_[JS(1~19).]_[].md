@@ -10,7 +10,7 @@
 4. Desktop applications (Electron)
 
 - How to link Javascript file
-```
+```js
     <script src="script.js"></script>
 ```
 
@@ -26,17 +26,18 @@ write firstcase lowercase, Othercasese Uppercase.
 That means:
 
 - Start with a lowercase letter.
+- Capitalize The First Letter Of Each New Word.
 
-- Capitalize the first letter of each new word.
 → Example: ```firstNamePerson```
 
 📚 [Reference]((https://github.com/jonasschmedtmann/complete-javascript-course))
 
 A variable is basically a box that stores a value.
 ## 3. Practice Assignment
-1. Declare variables called country, continent and population and assign values based on your own country (population in millions).
+1.Declare variables called country, continent and population and assign values based on your own country (population in millions).
 
-2. Log their values to the console.
+2.Log their values to the console.
+
 ```javascript
 let country = "korea";
 let continent = "Asia";
@@ -47,13 +48,13 @@ console.log(continent);  // Asia
 console.log(population); // 50000000
 ```
 ## 4. Data Types 
-1. Number : Used for decimals and integers  
+1.Number : Used for decimals and integers  
 
    ```javascript
    let age = 23;
    ```
 
-2. String : Used for text  
+2.String : Used for text  
 
    ```javascript
    let firstName = 'Jonas';
@@ -61,23 +62,23 @@ console.log(population); // 50000000
 
    A string must be enclosed in quotes ('' or "").
 
-3. Boolean : Logic type can be true or false  
+3.Boolean : Logic type can be true or false  
 
    ```javascript
    let fullAge = true;
    ```
 
-4. Undefined : A variable that has been declared but not assigned a value yet ('empty value')  
+4.Undefined : A variable that has been declared but not assigned a value yet ('empty value')  
 
    ```javascript
    let children;
    ```
 
-5. Null : An explicitly assigned empty value
+5.Null : An explicitly assigned empty value
 
-6. Symbol : A unique and immutable value (not commonly used for now)
+6.Symbol : A unique and immutable value (not commonly used for now)
 
-7. BigInt : Used for very large integers beyond the range of Number
+7.BigInt : Used for very large integers beyond the range of Number
 
 
 (BigInt and Symbol are rarely used in beginner-level JavaScript.)
